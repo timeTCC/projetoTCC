@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFF8F0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: #753f09;
+}
+
+hr{
+    margin: 10px 30px;
+    border-width:0;
+    color:#753f09;
+    background-color:#753f09
+}   
+

@@ -1,0 +1,88 @@
+#page-login{
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFF8F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#page-login form{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF8F0;
+    border-radius: 5px;
+}
+
+#page-login form .title{
+    margin: 10px auto;
+    padding: 5px;
+    color: #FF8811;
+}
+
+#page-login form input[type=text],
+#page-login form input[type=password]{
+    height: 50px;
+    width: 80%;
+    margin: 5px auto;
+    padding: 5px;
+    font-size: 12pt;
+    border-radius: 8px;
+    border: #F4D06F solid 2px;
+    color: #753f09;
+}
+
+#page-login form input[type=text]:hover,
+#page-login form input[type=password]:hover{
+    border: #F9E7B3 solid 2px;
+}
+
+#page-login form input[type=text]:focus,
+#page-login form input[type=password]:focus{
+    outline: #F9E7B3;
+}
+
+#page-login form .login-button{
+    background-color: #FF8811;
+    border: none;
+    height: 45px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 8px;
+    color: #753f09;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#page-login form .login-button:hover{
+    background-color: #ff962c;
+}
+
+#page-login form .login-button:focus{
+    outline: none;
+}
+
+#page-login form .login-button .button-text{
+    margin: auto;
+    font-size: 10pt;
+    color: #FFF8F0;
+}
+
+#page-login form .login-button .button-icon{
+    margin: auto 0px;
+    padding: 12px;
+    color: #FFF8F0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #753f09a6;
+    opacity: 1; /* Firefox */
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+  }
+
