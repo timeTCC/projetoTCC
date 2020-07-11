@@ -3,28 +3,39 @@ import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 import { Cookies } from 'react-cookie';
 
+import api from '../../services/api'
+
 import './styles.css';
 
 const Login = () => {
-    const [formData, setFormData] = useState({userName: String, userPassword: String});
+    const [formData, setFormData] = useState({user: String, password: String});
+    const [loginStatus, setLoginStatus] = useState('');
 
     const cookies = new Cookies();
     const history = useHistory();
 
     async function handleSubmit(event){
         event.preventDefault();
-        
-        cookies.set('userName', formData.userName, { path: '/' });
 
-        console.log(formData);
+        await api.post('users/authenticate', formData).then(response => {
+            setLoginStatus('');
+            cookies.set('userName', response.data.user, { path: '/' });
+            history.push('/');
+        }).catch(error => {
+            if(error.response.status === 404) {
+                setLoginStatus('Usuário não cadastrado!');
+            }
 
-        history.push('/');
+            if(error.response.status === 400) {
+                setLoginStatus('Senha incorreta!');
+            }
+
+            console.log(error.response.statusText);
+        });
     }
 
     function handleInputChange(event){
         const { name, value } = event.target;
-
-        console.log("has changed: " + name + " " + value);
 
         setFormData({ ...formData, [name]: value });
     }
@@ -39,7 +50,7 @@ const Login = () => {
                         type="text" 
                         placeholder="Usuário"
                         required
-                        name="userName" 
+                        name="user" 
                         id="userNameInput"
                         onChange={handleInputChange}
                     />
@@ -47,8 +58,8 @@ const Login = () => {
                         type="password" 
                         placeholder="Senha"
                         required
-                        name="userPassword" 
-                        id="userPasswordInput" 
+                        name="password" 
+                        id="userPasswordInput"
                         onChange={handleInputChange}
                     />
 
@@ -60,6 +71,7 @@ const Login = () => {
                             <FiLogIn size={20}/>
                         </div>
                     </button>
+                    <span className="login-status">{loginStatus}</span>
                 </form>
             </div>
         </div>

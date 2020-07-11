@@ -1,8 +1,7 @@
-//aqui tem as requisições do seu servidor
-//dentro dessa pasta eu posso colocar os outros serviçoes como de validação de usuario
+import Axios from 'axios'
 
-class api {
-    
-}
+const api = Axios.create({
+    baseURL: "http://localhost:3333",
+})
 
-export default api
+export default api;

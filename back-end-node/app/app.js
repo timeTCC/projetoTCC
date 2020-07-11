@@ -11,13 +11,13 @@ var usersRouter = require('./routes/users');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors({credentials: true, origin: 'http://localhost:4200'}));
+app.use(cors({credentials: true, origin: 'http://localhost:3030'}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
 
-app.listen(3000, () => {
+app.listen(3333, () => {
   console.log('servidor ok');
   db.authenticate().then(() =>{
       console.log('Conectou no MYSQL')
