@@ -71,6 +71,7 @@ const Login = () => {
                             <FiLogIn size={20}/>
                         </div>
                     </button>
+                    <Link className='link' to='/registerUser'>Ainda não tem uma conta?</Link>
                     <span className="login-status">{loginStatus}</span>
                 </form>
             </div>

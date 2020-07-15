@@ -1,4 +1,4 @@
-#page-login{
+#page-registerUser{
     height: 100vh;
     width: 100vw;
     background-color: #FFF8F0;
@@ -7,7 +7,7 @@
     justify-content: space-around;
 }
 
-#page-login form{
+#page-registerUser form{
     height: auto;
     width: 300px;
     margin: auto;
@@ -17,14 +17,14 @@
     border-radius: 5px;
 }
 
-#page-login form .title{
+#page-registerUser form .title{
     margin: 10px auto;
     padding: 5px;
     color: #FF8811;
 }
 
-#page-login form input[type=text],
-#page-login form input[type=password]{
+#page-registerUser form input[type=text],
+#page-registerUser form input[type=password]{
     height: 50px;
     width: 80%;
     margin: 5px auto;
@@ -35,22 +35,22 @@
     color: #753f09;
 }
 
-#page-login form input[type=text]:hover,
-#page-login form input[type=password]:hover{
+#page-registerUser form input[type=text]:hover,
+#page-loregisterUsergin form input[type=password]:hover{
     border: #F9E7B3 solid 2px;
 }
 
-#page-login form input[type=text]:focus,
-#page-login form input[type=password]:focus{
+#page-registerUser form input[type=text]:focus,
+#page-registerUser form input[type=password]:focus{
     outline: #F9E7B3;
 }
 
-#page-login form .login-button{
+#page-registerUser form .login-button{
     background-color: #FF8811;
     border: none;
     height: 45px;
     width: 80%;
-    margin: 45px auto 0px;
+    margin: 20px auto;
     border-radius: 8px;
     color: #753f09;
     cursor: pointer;
@@ -60,21 +60,21 @@
     overflow: hidden;
 }
 
-#page-login form .login-button:hover{
+#page-registerUser form .login-button:hover{
     background-color: #ff962c;
 }
 
-#page-login form .login-button:focus{
+#page-registerUser form .login-button:focus{
     outline: none;
 }
 
-#page-login form .login-button .button-text{
+#page-registerUser form .login-button .button-text{
     margin: auto;
     font-size: 10pt;
     color: #FFF8F0;
 }
 
-#page-login form .login-button .button-icon{
+#page-registerUser form .login-button .button-icon{
     margin: auto 0px;
     padding: 12px;
     color: #FFF8F0;
@@ -86,15 +86,9 @@
     font-family: Roboto, Arial, Helvetica, sans-serif;
   }
 
-#page-login form .login-status{
+#page-registerUser form .status{
     margin: 5px auto;
     height: 15px;
     width: auto;
-}
-
-#page-login form .link{
-    margin: 5px auto;
-    color: #753f09;
-    font-size: 12pt;
 }
 
